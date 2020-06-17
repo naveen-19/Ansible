@@ -1,0 +1,17 @@
+#to check python is installed or not
+---
+- hosts: prod
+  tasks:
+  - name: check python
+    apt:
+      name: python
+      state: present
+      
+#to upgrade all packages
+---
+- hosts: prod
+  tasks:
+  - name: upgrade all packages
+    apt:
+      name: "*"
+      state: latest
