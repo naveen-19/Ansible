@@ -1,0 +1,19 @@
+---
+- hosts: prod
+  tasks:
+          - name: installing httpd
+            apt:
+              name: apache2
+              state: latest
+          - name: copying index file
+            copy:
+                   src: index.html
+                   dest: /var/www/html/index.html
+          - name: stoping https
+            service:
+              name: apache2
+              state: stopped
+          - name: starting apache2
+            service:
+                    name: apache2
+                    state: started
