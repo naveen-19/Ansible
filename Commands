@@ -1,0 +1,8 @@
+#to create ansible role directory
+ansible-galaxy init --force --offline <rolename> 
+
+#syntax checking the ansible playbook
+ansible-playbook <ansible-playbook.yml> --syntax-check
+
+#to run ansible playbook
+ansible-playbook <ansible-playbook.yml>
